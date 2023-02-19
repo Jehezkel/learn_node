@@ -12,7 +12,9 @@ function listNestedFiles(dir, cb) {
 }
 function analyzeDirectory(dir, itemsList, cb) {
   let result = [];
+  //   keep track of concurrent jobs done
   let done = 0;
+  //   transform fnames to fullDir
   const fullNamesList = itemsList.map((i) => `${dir}/${i}`);
   function iterate(index) {
     if (!fullNamesList[index]) return null;

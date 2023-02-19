@@ -11,8 +11,8 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/Chapter4/FileConcat/FileConcat.js",
-            "cwd": "${workspaceFolder}/Chapter4/FileConcat/"
+            "program": "${workspaceFolder}/Chapter4/recursiveFind.js",
+            "cwd": "${workspaceFolder}/"
         }
     ]
 }
