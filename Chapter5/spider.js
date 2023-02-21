@@ -23,14 +23,10 @@ function spiderLinks(currentUrl, content, nesting) {
   let promise = Promise.resolve();
   if (nesting === 0) return promise;
   const links = getPageLinks(currentUrl, content);
-  //   this is just chaining promises from null one to each appending next spider for new link
-  //   for (const link of links) {
-  //     promise = promise.then(() => spider(link, nesting - 1));
-  //   }
+
   const promises = links.map((l) => spider(l, nesting - 1));
   //all accepts array of promises and returns them wrapped as single to resolve
   return Promise.all(promises);
-  //   return promise;
 }
 
 export function spider(url, nesting) {
